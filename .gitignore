@@ -1,2 +1,4 @@
 # 환경 변수 파일은 절대 커밋하지 마세요!
 .env 
+node_modules
+deploy_gh_pages.sh
