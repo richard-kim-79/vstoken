@@ -1,0 +1,25 @@
+{
+    "name": "Victor School Token",
+    "symbol": "VICTOR",
+    "description": "Victor School 교육 기금 토큰",
+    "image": "https://ibb.co/ynwpXJBb",
+    "external_url": "https://victorschool.com",
+    "attributes": [
+        {
+            "trait_type": "Token Type",
+            "value": "Education Fund"
+        },
+        {
+            "trait_type": "Network",
+            "value": "Solana"
+        },
+        {
+            "trait_type": "Year",
+            "value": "2025"
+        },
+        {
+            "trait_type": "Decimals",
+            "value": "9"
+        }
+    ]
+}

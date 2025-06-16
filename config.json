@@ -1,0 +1,20 @@
+{
+    "token": {
+        "name": "Victor School Token",
+        "symbol": "VICTOR",
+        "decimals": 9,
+        "description": "Victor School 교육 기금 토큰"
+    },
+    "network": {
+        "devnet": {
+            "url": "https://api.devnet.solana.com"
+        },
+        "mainnet": {
+            "url": "https://api.mainnet-beta.solana.com"
+        }
+    },
+    "minting": {
+        "strategy": "yearly",
+        "description": "매년 해당 연도 숫자만큼 토큰 발행"
+    }
+} 
