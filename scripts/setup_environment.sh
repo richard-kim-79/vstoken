@@ -8,6 +8,29 @@ NC='\033[0m' # No Color
 
 echo -e "${YELLOW}Starting Victor School Token development environment setup...${NC}"
 
+# Check if nvm is installed
+if ! command -v nvm &> /dev/null; then
+    echo -e "${YELLOW}Installing nvm...${NC}"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    
+    # Add nvm to PATH
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+else
+    echo -e "${GREEN}nvm is already installed${NC}"
+fi
+
+# Use Node.js version from .nvmrc
+if [ -f .nvmrc ]; then
+    echo -e "${YELLOW}Using Node.js version from .nvmrc...${NC}"
+    nvm use
+else
+    echo -e "${RED}Error: .nvmrc file not found${NC}"
+    exit 1
+fi
+
 # Check if Solana is installed
 if ! command -v solana &> /dev/null; then
     echo -e "${YELLOW}Installing Solana CLI...${NC}"
